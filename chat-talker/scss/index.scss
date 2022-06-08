@@ -1,0 +1,547 @@
+@import 'base';
+
+/* 將 swiper 套件主色改為黃色 */
+:root {
+  --swiper-theme-color: #{$yellow};
+}
+a {
+  display: inline-block;
+}
+.text-nowrap {
+  white-space: nowrap;
+}
+.text-center {
+  text-align: center;
+}
+.row {
+  display: flex;
+}
+.row-reverse {
+  flex-direction: row-reverse;
+}
+.flex-column {
+  flex-direction: column;
+}
+@media (max-width: $grid-sm) {
+  .flex-sm-row {
+    flex-direction: row;
+  }
+  .flex-sm-column {
+    flex-direction: column;
+  }
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+@media (max-width: $grid-xl) {
+  .flex-xl-wrap {
+    flex-wrap: wrap;
+  }
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.align-items-center {
+  align-items: center;
+}
+.align-items-end {
+  align-items: flex-end;
+}
+.bg-circle {
+  border-radius: 50%;
+  z-index: -1;
+}
+.container {
+  margin: 0 auto;
+  max-width: calc(100% - 280px);
+
+  @media (max-width: $grid-xl) {
+    max-width: calc(100% - 100px);
+  }
+  @media (max-width: $grid-sm) {
+    max-width: calc(100% - 40px);
+  }
+}
+.header {
+  padding-bottom: 148px;
+
+  background-image: url('../images/bg_home.svg');
+  background-repeat: no-repeat;
+  background-position: top right;
+
+  position: relative;
+
+  @media (max-width: $grid-sm) {
+    padding-bottom: 0px;
+    background-image: url('../images/bg_home_sm.svg');
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+  }
+}
+.nav {
+  padding: 24px 140px;
+
+  @media (max-width: $grid-xl) {
+    padding: 24px 50px;
+  }
+  @media (max-width: $grid-sm) {
+    padding: 16px 20px;
+    border-bottom: 1px solid $yellow;
+  }
+  .logo {
+    height: 40px;
+
+    @media (max-width: $grid-sm) {
+      height: 24px;
+    }
+  }
+  .btn-price-red {
+    color: $white;
+    padding: 8px 32px;
+
+    background-color: $red;
+    border-radius: 22px;
+  }
+}
+.banner {
+  padding: 158px 0px 157px;
+  background-image: url('../images/home.svg');
+  background-repeat: no-repeat;
+  background-position: top right;
+
+  @media (max-width: $grid-sm) {
+    padding: 32px 0px;
+    background-image: url('../images/home.svg');
+    background-repeat: no-repeat;
+    background-position: center right;
+  }
+  @media (max-width: $grid-sm) {
+    padding-bottom: 332px;
+    background-position: bottom center;
+    background-size: 304px 304px;
+  }
+  .intro {
+    h1 {
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 26px;
+      color: $blue;
+
+      @media (max-width: $grid-sm) {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+    p {
+      margin-top: 8px;
+      font-size: 48px;
+      font-weight: bold;
+      line-height: 70px;
+
+      @media (max-width: $grid-sm) {
+        font-size: 32px;
+        line-height: 46px;
+      }
+    }
+    h2 {
+      margin-top: 16px;
+      font-size: 20px;
+      line-height: 29px;
+
+      @media (max-width: $grid-sm) {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+}
+.main {
+  margin-top: 100px;
+
+  @media (max-width: $grid-sm) {
+    margin-top: 92px;
+  }
+
+  h2 {
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 46px;
+
+    @media (max-width: $grid-sm) {
+      font-size: 28px;
+      line-height: 40px;
+    }
+  }
+  .btn-price-blue {
+    font-size: 18px;
+    line-height: 26px;
+    color: $white;
+    padding: 11px 32px;
+
+    background-color: $blue;
+    border-radius: 27px;
+  }
+  .social-media {
+    position: relative;
+    h2 {
+      @media (max-width: $grid-sm) {
+        padding-bottom: 20px;
+      }
+    }
+    .bg-circle {
+      width: 360px;
+      height: 360px;
+      background-color: $blue;
+
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      transform: translate(-222px, -80%);
+
+      @media (max-width: $grid-sm) {
+        width: 126px;
+        height: 126px;
+        transform: translate(-77px, 13px);
+      }
+    }
+  }
+  .social-card {
+    max-width: 240px;
+    margin: 48px 63px 100px;
+
+    @media (max-width: $grid-sm) {
+      margin: 12px auto;
+    }
+    img {
+      width: 90px;
+      height: 90px;
+
+      @media (max-width: $grid-sm) {
+        width: 60px;
+        height: 60px;
+      }
+    }
+    h3 {
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 35px;
+      padding: 24px 0px;
+
+      @media (max-width: $grid-sm) {
+        font-size: 18px;
+        line-height: 26px;
+        padding: 16px 0px;
+      }
+    }
+    p {
+      padding: 0px 16px;
+      color: $gray;
+
+      @media (max-width: $grid-sm) {
+        padding: 0px;
+      }
+    }
+  }
+  .target-customers {
+    position: relative;
+    h2 {
+      padding-bottom: 16px;
+
+      @media (max-width: $grid-sm) {
+        padding-top: 48px;
+      }
+    }
+    .p-title {
+      font-size: 20px;
+      line-height: 29px;
+
+      @media (max-width: $grid-sm) {
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+    .overflow-hidden {
+      width: 200px;
+      overflow: hidden;
+      position: absolute;
+      right: 0px;
+      bottom: -155px;
+      z-index: -1;
+
+      @media (max-width: $grid-sm) {
+        width: 90px;
+        bottom: -20px;
+      }
+
+      .bg-circle {
+        width: 310px;
+        height: 310px;
+        background-color: $light-blue;
+
+        @media (max-width: $grid-sm) {
+          width: 135px;
+          height: 135px;
+        }
+      }
+    }
+  }
+  .target-list {
+    @media (max-width: $grid-sm) {
+      margin-top: 8px;
+    }
+  }
+  .target-card {
+    width: 260px;
+    margin: 48px 8px 30px;
+    border-radius: 12px;
+    box-shadow: 0px 2px 10px #00000014;
+    background-color: $white;
+
+    @media (max-width: $grid-sm) {
+      margin: 12px auto;
+    }
+    img {
+      width: 100%;
+    }
+    h3 {
+      color: $blue;
+      font-weight: bold;
+      padding: 16px 0px;
+    }
+    p {
+      padding: 0px 16px 24px;
+    }
+  }
+  .app-functions {
+    margin-top: 70px;
+
+    @media (max-width: $grid-sm) {
+      margin-top: 60px;
+    }
+    .describe {
+      padding: 165px 50px;
+
+      @media (max-width: $grid-xl) {
+        text-align: center;
+      }
+      @media (max-width: $grid-sm) {
+        padding: 0px;
+        margin-bottom: 20px;
+      }
+      h2 {
+        margin-bottom: 16px;
+      }
+      p {
+        font-size: 18px;
+        line-height: 26px;
+        margin-bottom: 24px;
+
+        @media (max-width: $grid-sm) {
+          font-size: 16px;
+          line-height: 24px;
+          margin-bottom: 16px;
+        }
+      }
+    }
+    .function-list {
+      width: 50%;
+      max-height: 588px;
+      @media (max-width: $grid-xl) {
+        width: 100%;
+        max-height: 560px;
+      }
+      @media (max-width: $grid-lg) {
+        max-height: none;
+      }
+    }
+    .function-card {
+      margin-right: 47px;
+      margin-bottom: 28px;
+      width: calc(50% - 47px);
+      height: calc(50% - 28px);
+      box-shadow: 0px 2px 10px #00000014;
+      border-radius: 12px;
+      background-color: $white;
+
+      padding: 32px 32px 48px;
+
+      @media (max-width: $grid-xl) {
+        margin: 12px 52px;
+        width: auto;
+        height: auto;
+      }
+
+      h3 {
+        margin: 16px 0px 24px;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 26px;
+      }
+    }
+  }
+  .function-icon {
+    width: 86px;
+    height: 86px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 10px #00000014;
+
+    background-repeat: no-repeat;
+    background-size: 52px 52px;
+    background-position: center;
+
+    &.icon-1 {
+      background-image: url('../images/icon01.svg');
+    }
+    &.icon-2 {
+      background-image: url('../images/icon02.svg');
+    }
+    &.icon-3 {
+      background-image: url('../images/icon03.svg');
+    }
+    &.icon-4 {
+      background-image: url('../images/icon04.svg');
+    }
+  }
+  .evaluation {
+    position: relative;
+
+    .bg-circle {
+      width: 150px;
+      height: 150px;
+      background-color: $light-yellow;
+
+      position: absolute;
+      left: 50px;
+      top: 50px;
+
+      @media (max-width: $grid-sm) {
+        left: 0px;
+        top: 0px;
+        transform: translate(-50%, 50%);
+      }
+    }
+    h2 {
+      margin-top: 72px;
+      margin-bottom: 48px;
+
+      @media (max-width: $grid-sm) {
+        margin-top: 48px;
+        margin-bottom: 32px;
+      }
+    }
+    /* 調整 swiper 容器 */
+    .swiper {
+      padding: 60px 16px 0 0;
+    }
+    .swiper-wrapper {
+      padding: 0 0 0 8px;
+    }
+
+    /* 將底部 pagination 分頁的 active 狀態改為想要的樣式 */
+    .swiper-pagination-bullet-active {
+      width: 20px;
+      border-radius: 8px;
+    }
+
+    /* 讓分頁圓點移至下方 */
+    .swiper-pagination {
+      position: static;
+      margin-top: 24px;
+    }
+  }
+  .evaluation-card {
+    background-color: $white;
+    box-shadow: 0px 2px 10px #00000014;
+    border-radius: 12px;
+    padding: 48px 32px 24px;
+    position: relative;
+
+    @media (max-width: $grid-sm) {
+      padding: 48px 16px 16px;
+    }
+    .user-img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      box-shadow: 0px 2px 10px #00000014;
+
+      background-repeat: no-repeat;
+      background-size: 80px 80px;
+      background-position: center;
+
+      position: absolute;
+      top: -55px;
+
+      &.user-1 {
+        background-image: url('../images/user01.jpg');
+      }
+      &.user-2 {
+        background-image: url('../images/user02.jpg');
+      }
+      &.user-3 {
+        background-image: url('../images/user03.jpg');
+      }
+    }
+    .top-border {
+      margin-top: 24px;
+      padding-top: 24px;
+      border-top: 1px solid $middle-gray;
+    }
+    .star-list {
+      li {
+        margin-right: 8px;
+
+        img {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+    .customer-title {
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+  }
+}
+.action {
+  margin-top: 100px;
+  height: 503px;
+  background-image: url('../images/bg.png');
+  background-repeat: repeat-x;
+  background-position: center;
+
+  @media (max-width: $grid-sm) {
+    background-image: url('../images/talk03.svg'), url('../images/talk04.svg'),
+      url('../images/bg.png');
+    background-repeat: no-repeat, no-repeat, repeat-x;
+    background-position: top 40% right 10%, top 60% left 10%, center;
+  }
+
+  h2 {
+    padding: 260px 0px 48px;
+
+    @media (max-width: $grid-sm) {
+      font-size: 24px;
+      line-height: 35px;
+    }
+  }
+}
+.footer {
+  padding: 16px 0px;
+  background-color: $light-gray;
+}
+.go-to-top {
+  position: fixed;
+  right: 48px;
+  bottom: 48px;
+  z-index: 2;
+  
+  @media (max-width: $grid-sm) {
+    right: 16px;
+    bottom: 16px;
+  }
+}
